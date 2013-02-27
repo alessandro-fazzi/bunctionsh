@@ -19,9 +19,25 @@ bash ./bunctions.sh init
 reset
 ```
 
-If I want to add some functions I barely have to put code in a file with no
-exension and save it in the same dir. I'd like to manage subdirs as well, but
-when I'll have too much of functions! :)
+## Script structure
+
+```
+.
+├── bunctionsh.sh             <- the initializer
+├── helpers                   <- custom functions: here your fun
+│   ├── chweb
+│   ├── colorize_feedback
+│   ├── git-prompt
+│   ├── lampp
+│   └── randpass
+├── lib                       <- some lib to be considered mandatory
+│   └── prompt_colors_helper
+└── README.md                 <- what you are actually reading
+```
+
+If I want to add some functions I barely have to put code in a file and save it
+in the ```helpers``` dir. I'd like to manage subdirs as well, but when I'll have
+too much of functions! :)
 
 I'll collect few of them. At the moment there is:
 
