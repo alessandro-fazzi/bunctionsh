@@ -43,3 +43,14 @@ Generate random password like a cowboy!
 ___
 
 They are almost commented. Almost! ;)
+
+## Our Bash power-ups at fingertips!?!?
+
+Please, if you use this little initializer drop me a pull request with your
+favoured and flavoured functions! I'll be glad =)
+
+
+
+####### Keywords
+
+*bash functions collection init initializer sh bashrc rc dotfiles*
