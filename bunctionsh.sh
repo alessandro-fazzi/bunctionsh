@@ -5,7 +5,7 @@
 # and it will be itself called inside your .bashrc after this init.
 
 [[ $1 == 'init' ]] || (
-    echo '[.bash_functions] This script can be called just with init arg'
+    echo '[.bunctionsh] This script can be called just with init arg'
   )
 
 pushd `dirname $0` > /dev/null
@@ -13,24 +13,27 @@ abs_path=`pwd`
 popd > /dev/null
 
 [[ -d "${abs_path}" ]] || (
-    echo '[.bash_functions] Your functions folder does not exists.'
+    echo '[.bunctionsh] Your functions folder does not exists.'
     echo 'You probably have a corrupted/old script...sorry'
   )
 
 if [[ -d ${abs_path} && $1 == 'init' ]]; then
-  cat <<EOT > ~/.bash_functions
+  cat <<EOT > ~/.bunctionsh
 #!/bin/bash
-for i in \`find $abs_path ! -name $(basename $0) -type f\`; do
-. \$i
+for i in \`ls ${abs_path}/lib\`; do
+. ${abs_path}/lib/\$i
+done
+for i in \`ls ${abs_path}/helpers\`; do
+. ${abs_path}/helpers/\$i
 done
 EOT
 
-grep -q .bash_functions ~/.bashrc || (
+grep -q .bunctionsh ~/.bashrc || (
   cat <<EOT >> ~/.bashrc
 
 # Personal functions definition
-if [ -f ~/.bash_functions ]; then
-  bash ~/.bash_functions
+if [[ -f ~/.bunctionsh ]]; then
+  source ~/.bunctionsh
 fi
 
 EOT

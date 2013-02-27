@@ -1,3 +1,4 @@
+#!/bin/bash
 # Generate a random password
 # args:
 # $1: password lenght or defaults to 32

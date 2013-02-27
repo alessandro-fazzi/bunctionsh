@@ -165,9 +165,9 @@ dvcs_function="
     # If we are in mercurial ...
     if [ -n \"\$_hg_dir\" ]; then
 
-				if [ -z "`echo $(hg prompt \"abort\" 2>&1) | grep abort`" ]; then
-				    echo \"hg-prompt not installed. Suggest http://sjl.bitbucket.org/hg-prompt/installation/\"
-				fi
+                if [ -z "`echo $(hg prompt \"abort\" 2>&1) | grep abort`" ]; then
+                    echo \"hg-prompt not installed. Suggest http://sjl.bitbucket.org/hg-prompt/installation/\"
+                fi
 
         hgBranch=\`cat \"\$_hg_dir/.hg/branch\"\`
 

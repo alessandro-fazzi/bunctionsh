@@ -1,0 +1,19 @@
+# Colorized feedback functions. Just helper for other functions
+# Colors setup in another bash function
+
+# Helper feedback functions
+function info() {
+  echo "${COLOR_BOLD}    * ${1}${COLOR_RESET}"
+}
+function success() {
+  echo "${COLOR_BOLD}${COLOR_GREEN}   ** ${1}${COLOR_RESET}"
+}
+function warning() {
+  echo "${COLOR_BOLD}${COLOR_YELLOW}  *** ${1}${COLOR_RESET}"
+}
+function error() {
+  echo "${COLOR_BOLD}${COLOR_RED} **** ${1}${COLOR_RESET}"
+}
+function question() {
+  echo -n "${COLOR_BOLD}${COLOR_BLU}    ? ${1}?${COLOR_RESET} "
+}
