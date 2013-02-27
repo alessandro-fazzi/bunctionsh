@@ -1,0 +1,4 @@
+# Manage lampp server without pain in the neck
+function lampp(){
+  $(which sudo) /opt/lampp/lampp $1
+}

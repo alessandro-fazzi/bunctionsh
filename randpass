@@ -1,0 +1,9 @@
+# Generate a random password
+# args:
+# $1: password lenght or defaults to 32
+# $2: if (int)0 so pwd will be just with [:alnum:] chars
+function randpass() {
+  [ "$2" == "0" ] && CHAR="[:alnum:]" || CHAR="[:graph:]"
+    cat /dev/urandom | tr -cd "$CHAR" | head -c ${1:-32}
+    echo
+}

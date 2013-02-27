@@ -1,0 +1,24 @@
+# Configura il gruppo con cui viene eseguito il tuo webserver
+# args:
+# $1: path top of the tree. Default "."
+function chweb(){
+  # Set the group of you webserver. Usually "www-data" or "nogroup"
+  group='nogroup'
+  
+  if [[ ! $group ]]; then
+    echo 'Devi prima configurare il gruppo del tuo webserver dentro la funzione'
+    exit 1
+  fi
+  
+  if [[ ! $1 ]]; then
+    path=$(pwd)
+  else
+    path=$1
+  fi
+  
+  chgrp $group $path -R
+  chmod +s $path
+  find $path -type f -exec chmod 664 {} +
+  find $path -type d ! -name tmp -exec chmod 775 {} +
+  find $path -type d -name tmp -exec chmod 777 {} +
+}
