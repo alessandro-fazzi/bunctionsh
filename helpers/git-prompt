@@ -10,25 +10,6 @@ NOBRANCH_TEXT="no branch!"
 REBASE_TEXT="✂ ʀebase"
 SUBMODULE_TEXT=""
 
-# Colors for prompt
-COLOR_RED=$(tput sgr0 && tput setaf 1)
-COLOR_GREEN=$(tput sgr0 && tput setaf 2)
-COLOR_YELLOW=$(tput sgr0 && tput setaf 3)
-COLOR_BLUE=$(tput sgr0 && tput setaf 4)
-COLOR_MAGENTA=$(tput sgr0 && tput setaf 5)
-COLOR_CYAN=$(tput sgr0 && tput setaf 6)
-COLOR_GRAY=$(tput sgr0 && tput setaf 7)
-COLOR_WHITE=$(tput sgr0 && tput setaf 7 && tput bold)
-COLOR_LIGHTRED=$(tput sgr0 && tput setaf 1 && tput bold)
-COLOR_LIGHTGREEN=$(tput sgr0 && tput setaf 2 && tput bold)
-COLOR_LIGHTYELLOW=$(tput sgr0 && tput setaf 3 && tput bold)
-COLOR_LIGHTBLUE=$(tput sgr0 && tput setaf 4 && tput bold)
-COLOR_LIGHTMAGENTA=$(tput sgr0 && tput setaf 5 && tput bold)
-COLOR_LIGHTCYAN=$(tput sgr0 && tput setaf 6 && tput bold)
-
-COLOR_RESET=$(tput sgr0)
-
-
 _hg_dir=""
 function _hg_check {
     [ -d ".hg" ] && _hg_dir=`pwd`
