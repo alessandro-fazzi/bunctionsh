@@ -15,7 +15,7 @@ Here I have to do these steps:
 ```bash
 git clone git://github.com/pioneerskies/bunctionsh.git
 cd bunctionsh
-bash ./bunctions.sh init
+bash ./bunctionsh.sh init
 reset
 ```
 
