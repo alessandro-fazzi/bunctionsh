@@ -4,8 +4,9 @@
 
 I'm used to use some functions sticked in my bash; usually when an alias become
 too rigid to do more advanced tasks, or when I need to have complex actions which
-requires logic or at last but not the least because my loved script.sh is in my
-$PATH, but if I do ```sudo script.sh``` it's gone!
+requires logic. Overall I feel like functions were shell extensions which can
+collaborate one with other, setting up a personalised environement, much more than
+scripts.
 
 So I'm just in search of a quick method to reproduce my bash functions on many
 computers, such as my collegues' laptops or the number of servers that I manage.
@@ -19,17 +20,23 @@ bash ./bunctionsh.sh init
 reset
 ```
 
+Go in ```bunctionsh/helpers``` and activate desired functions removing the
+__off_ extension.
+
+Before doing that, please, read the _WARNING!!! Please, be carefull!_ paragraph
+at the end of this README.
+
 ## Script structure
 
 ```
 .
 ├── bunctionsh.sh             <- the initializer
 ├── helpers                   <- custom functions: here your fun
-│   ├── chweb
-│   ├── colorize_feedback
-│   ├── git-prompt
-│   ├── lampp
-│   └── randpass
+│   ├── chweb_off
+│   ├── colorize_feedback_off
+│   ├── git-prompt_off
+│   ├── lampp_off
+│   └── randpass_off
 ├── lib                       <- some lib to be considered mandatory
 │   └── prompt_colors_helper
 └── README.md                 <- what you are actually reading
@@ -65,7 +72,15 @@ They are almost commented. Almost! ;)
 Please, if you use this little initializer drop me a pull request with your
 favoured and flavoured functions! I'll be glad =)
 
+## WARNING!!! Please, be carefull!
 
+You have to keep in mind that you are executing code every time you open up
+a new terminal! If this code is broken, you should have a big big big big
+pain in the ass. Due to this I have modified the default behavoiur, so that
+now **by default all functions are switched off**. The method is stupid but
+painless: functions which ends in "**_off**" are switched off.
+Rename one function per time, test it in opening a new terminal; if it works
+you're done! If it does not work, than fix it!
 
 ####### Keywords
 
