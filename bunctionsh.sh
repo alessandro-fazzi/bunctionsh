@@ -23,7 +23,7 @@ if [[ -d ${abs_path} && $1 == 'init' ]]; then
 for i in \`ls ${abs_path}/lib\`; do
 . ${abs_path}/lib/\$i
 done
-for i in \`ls ${abs_path}/helpers\`; do
+for i in \`ls ${abs_path}/helpers/*[^_off]\`; do
 . ${abs_path}/helpers/\$i
 done
 EOT
