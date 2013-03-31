@@ -55,13 +55,17 @@ Set right permissions to a dir recursively to work in a web-dev env.
 Just a helper: I have always colorization functions for feedback from scripts
 
 #### git-prompt
-If you are in a repo have some usefull info in your $PS1 is a must!
+If you are in a repo have some usefull info in your $PS1 is a must! (read code
+comments at the bottom of the file, please)
 
 #### lampp
 If you use lampp you can stop/start/reload it ... just a shortcut
 
 #### randpass
 Generate random password like a cowboy!
+
+#### ex
+Extract files: depends on zip, unrar and p7zip
 
 ___
 
