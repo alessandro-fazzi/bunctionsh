@@ -24,7 +24,7 @@ for i in \`ls ${abs_path}/lib\`; do
 . ${abs_path}/lib/\$i
 done
 for i in \`ls ${abs_path}/helpers/*[^_off]\`; do
-. ${abs_path}/helpers/\$i
+. \$i
 done
 EOT
 
