@@ -24,7 +24,7 @@ shopt -s extglob
 for i in \`ls ${abs_path}/lib\`; do
 . ${abs_path}/lib/\$i
 done
-for i in \`ls ${abs_path}/helpers/*!(_off)\`; do
+for i in \`ls ${abs_path}/helpers/!(*_off)\`; do
 . \$i
 done
 EOT
