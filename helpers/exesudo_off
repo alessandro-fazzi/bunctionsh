@@ -93,5 +93,5 @@ function exesudo ()
     # DONE: EXECUTE THE TEMPORARY FILE WITH SUDO
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     sudo bash "$tmpfile"
-    rm "$tmpfile"
+    unlink "$tmpfile"
 }
