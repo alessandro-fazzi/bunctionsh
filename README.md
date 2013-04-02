@@ -34,6 +34,7 @@ at the end of this README.
 ├── helpers                   <- custom functions: here your fun
 │   ├── chweb_off
 │   ├── colorize_feedback_off
+│   ├── ex_off
 │   ├── git-prompt_off
 │   ├── lampp_off
 │   └── randpass_off
