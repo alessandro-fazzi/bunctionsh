@@ -35,6 +35,7 @@ at the end of this README.
 │   ├── chweb_off
 │   ├── colorize_feedback_off
 │   ├── ex_off
+│   ├── exesudo_off
 │   ├── git-prompt_off
 │   ├── lampp_off
 │   └── randpass_off
@@ -67,6 +68,10 @@ Generate random password like a cowboy!
 
 #### ex
 Extract files: depends on zip, unrar and p7zip
+
+#### exesudo
+Exec another function with sudo. Lose function's name autocompletion,
+but works great!
 
 ___
 
