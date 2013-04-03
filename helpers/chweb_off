@@ -4,21 +4,29 @@
 function chweb(){
   # Set the group of you webserver. Usually "www-data" or "nogroup"
   group='nogroup'
-  
+
   if [[ ! $group ]]; then
-    echo 'Devi prima configurare il gruppo del tuo webserver dentro la funzione'
+    echo 'You must to set your webserver group into the script. bunctionsh/helpers/chweb'
     exit 1
   fi
-  
+
   if [[ ! $1 ]]; then
     path=$(pwd)
   else
     path=$1
   fi
-  
+
+  echo -n "= setting files and folders group..."
   chgrp $group $path -R
+  echo "DONE!"
   chmod +s $path
+  echo -n "= setting files permissions..."
   find $path -type f -exec chmod 664 {} +
+  echo "DONE!"
+  echo -n "= setting folders permissions (tmp excluded)..."
   find $path -type d ! -name tmp -exec chmod 775 {} +
+  echo "DONE!"
+  echo -n "= setting tmp folders permissions..."
   find $path -type d -name tmp -exec chmod 777 {} +
+  echo "DONE!"
 }
