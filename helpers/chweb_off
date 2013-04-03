@@ -20,9 +20,13 @@ function chweb(){
   chgrp $group $path -R
   echo "DONE!"
   chmod +s $path
-  echo -n "= setting files and folders permissions..."
+  echo -n "= setting files permissions..."
   find $path -type f -exec chmod 664 {} +
+  echo "DONE!"
+  echo -n "= setting folders permissions (tmp excluded)..."
   find $path -type d ! -name tmp -exec chmod 775 {} +
+  echo "DONE!"
+  echo -n "= setting tmp folders permissions..."
   find $path -type d -name tmp -exec chmod 777 {} +
   echo "DONE!"
 }
