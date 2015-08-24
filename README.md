@@ -77,6 +77,9 @@ Extract files: depends on zip, unrar and p7zip
 Exec another function with sudo. Lose function's name autocompletion,
 but works great!
 
+#### brew_update_all
+Updates and upgrade [Brew](http://brew.sh/) and [Cask](http://caskroom.io/)
+
 ___
 
 They are almost commented. Almost! ;)
