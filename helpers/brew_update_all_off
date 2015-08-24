@@ -1,0 +1,6 @@
+function brew_update_all(){
+  brew update
+  brew upgrade
+  brew cask list | xargs brew cask install
+  brew cleanup
+}
